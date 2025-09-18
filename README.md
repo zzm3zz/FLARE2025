@@ -1,4 +1,4 @@
-# This repository is the official implementation of [MST-UDA: A Unsupervised Domain Adaptation Framework via 2.5D Multi-Style Perceptual Translation Network and Self-Filtering for Cross-Modal Multi-Organ Segmentation](https://openreview.net/forum?id=fIeqn4x0yL&referrer=%5BAuthor+Console%5D%28%2Fgroup%3Fid%3DMICCAI.org%2F2025%2FChallenge%2FFLARE%2FAuthors%23your-submissions%29) of Team tju_vil_pioneers on FLARE24 challenge.
+# This repository is the official implementation of [MST-UDA: A Unsupervised Domain Adaptation Framework via 2.5D Multi-Style Perceptual Translation Network and Self-Filtering for Cross-Modal Multi-Organ Segmentation](https://openreview.net/forum?id=fIeqn4x0yL&referrer=%5BAuthor+Console%5D%28%2Fgroup%3Fid%3DMICCAI.org%2F2025%2FChallenge%2FFLARE%2FAuthors%23your-submissions%29) of Team zzm3zz on FLARE25-Task3 challenge.
 
 ## 🔍 Overview
 This work addresses the challenge of adapting CT-trained segmentation models to MRI and PET images, employing 2.5D Style Translation Method, Self-Filtering, and a two-stage segmentation framework in the FLARE25-Task3 dataset. For more details, see the pipeline diagram below:
