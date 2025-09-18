@@ -1,0 +1,20 @@
+BASE: ["preprocess_base.yaml"]
+
+TRAINING_TYPE: 'fine'
+# stage1 - preprocess
+MR_DATA_PREPROCESS:
+  STAGE: 1
+
+INFERENCE:
+  IS_OVERWRITE_PREDICT_MASK: True
+  SAVE_SOFTMAX: False
+
+VERSION: "preprocess_step2_MRSeg"
+
+# final stage
+DATASET:
+  TRAIN_IMAGE_PATH: 'MR/Training/MR_Seg'
+  TRAIN_MASK_PATH: 'MR/Training/MR_Seg_label'
+  IS_ABDOMEN_CROP: False
+  FINE:
+    PROPRECESS_PATH: "processed_data/fine/small_segnet/MR_Seg"

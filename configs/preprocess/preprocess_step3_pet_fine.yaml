@@ -1,0 +1,15 @@
+BASE: ["preprocess_step2_pet.yaml"]
+
+VERSION: "preprocess_step3_pet_fine"
+
+# final stage
+DATASET:
+  TRAIN_IMAGE_PATH: 'PET/PET_select'
+  TRAIN_MASK_PATH: 'PET/PET_select_label'
+  IS_ABDOMEN_CROP: False
+  COARSE:
+    PROPRECESS_PATH: "processed_data/coarse/small_segnet/PET_stage3"
+  FINE:
+    PROPRECESS_PATH: "processed_data/fine/small_segnet/PET_stage3"
+    SIZE: [ 96, 192, 192 ]
+    PREPROCESS_SIZE: [ 192, 192, 96 ]

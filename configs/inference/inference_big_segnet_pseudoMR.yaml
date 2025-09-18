@@ -1,0 +1,28 @@
+BASE: ['inference_base.yaml']
+TRAINING_TYPE: 'fine'
+VAL_OUTPUT_PATH: "/root/autodl-tmp/FLARE25/datasets/MR/Training/LLD-MMRI-3704_C+Delay_all_infer_1" # The path of inference output directory.
+
+DATASET:
+  DATASET_NAME: 'inference_demo'
+  VAL_IMAGE_PATH: '/root/autodl-tmp/FLARE25/datasets/MR/Training/LLD-MMRI-3704_C+Delay_all'
+  # VAL_IMAGE_PATH: '/root/autodl-tmp/FLARE24/datasets/check'
+  VAL_CHANGE_SPACING: False
+  DA:
+    DO_MIRROR: False
+  FINE:
+    SIZE: [ 96, 256, 256 ]
+    PREPROCESS_SIZE: [ 256, 256, 96 ]
+
+MODEL:
+  FINE:
+    BASE_NUM_FEATURES: 24
+    MAX_NUM_FEATURES: 360
+    DEPTHS: [2, 2, 2, 2]
+    NUM_HEADS: [3, 6, 12, 24]
+    WINDOW_SIZE: [3, 4, 4]
+    MLP_RATIO: 4.0
+    DROP_PATH_RATE: 0.2
+
+VAL:
+  IS_CROP: False
+  TTA: False
